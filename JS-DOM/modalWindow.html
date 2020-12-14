@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModalWindow</title>
+  <style>
+    .container {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+      text-decoration: none;
+      background-color: blue;
+      border: none;
+      color: white;
+      width: 60px;
+      height: 30px;
+    }
+    .btn:hover {
+      cursor: pointer;
+    }    
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      background-color: wheat;
+      opacity: 0.9;
+    }
+    .modal-container {
+      position: relative;
+    }
+    .close {
+      color: white;
+      position: absolute;
+      background: red;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+      top: -10px;
+      right: -5px;
+    }
+    .content {
+      width: 500px;
+      background-color: #444;
+      padding: 10px;
+      margin: 0;
+      color: white;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, maxime natus eius, dolorum iste laudantium odio nam autem similique ipsa neque repellendus a animi quidem molestias quae architecto? Eveniet, fugiat? Laudantium nobis, voluptatum error neque ad modi cum! Distinctio tempore illum exercitationem, vel nulla sed non odio ullam odit ad.
+    </p>
+    <button class="btn" id="openOverlay">open</button>
+    <script src="./modalWindow.js"></script>
+  </div>
+  <!-- <div class="overlay">
+    <div class="modal-container">
+      <div class="content">Hellllloooooooo</div>
+      <a href="#" class="close">X</a>
+    </div>
+  </div> -->
+</body>
+</html>

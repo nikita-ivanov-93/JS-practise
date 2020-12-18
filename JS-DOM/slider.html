@@ -84,22 +84,35 @@
     const maxRight = (items.length-preShownItems) * step;
     let currentRight = 0;
 
-
        
+    var leftClick;
+    var rightClick;
     rightbtn.addEventListener('click', event => {
       event.preventDefault();
-      let currentRight = parseInt(computedStyle.right); 
-      if (currentRight  < maxRight) {
-        list.style.right = `${currentRight + step}px`;
-      }
+      if (rightClick == true) {
+        
+      } else {
+        let currentRight = parseInt(computedStyle.right); 
+        if (currentRight < maxRight) {
+          list.style.right = `${currentRight + step}px`;
+          rightClick = true;
+        }
+      };
+      setTimeout(() => {rightClick = false}, 200);
     });
 
     leftbtn.addEventListener('click', event => {
       event.preventDefault();
-      let currentRight = parseInt(computedStyle.right); 
-      if (currentRight > minRight) {
-        list.style.right = `${currentRight - step}px`;
-      }
+      if (leftClick == true) {
+      } else {
+        let currentRight = parseInt(computedStyle.right); 
+        if (currentRight > minRight) {
+          list.style.right = `${currentRight - step}px`;
+          leftClick = true;
+        }
+      };
+      setTimeout(() => {leftClick = false}, 200);
+
     });
 
     // rightbtn.addEventListener('click', event => {

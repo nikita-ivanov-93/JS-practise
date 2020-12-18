@@ -96,9 +96,9 @@
         if (currentRight < maxRight) {
           list.style.right = `${currentRight + step}px`;
           rightClick = true;
+          setTimeout(() => {rightClick = false}, 500);
         }
       };
-      setTimeout(() => {rightClick = false}, 200);
     });
 
     leftbtn.addEventListener('click', event => {
@@ -109,9 +109,9 @@
         if (currentRight > minRight) {
           list.style.right = `${currentRight - step}px`;
           leftClick = true;
+          setTimeout(() => {leftClick = false}, 500);
         }
       };
-      setTimeout(() => {leftClick = false}, 200);
 
     });
 

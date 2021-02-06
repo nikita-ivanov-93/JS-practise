@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="class class1 class2"></div>
+  <p class="class">
+    <div class="class class1 class2">
+      <div class="class class1 class2 class3"></div>
+    </div>
+  </p>
+  <a class="class1"></a>
+  <span class="class2"></span>
+  <p class="class1">
+    <div class="class class1 class2"></div>
+  </p>
+  <span class="class2"></span>
+  <p class="class">
+    <div class="class class1 class2"></div>
+  </p>
+  <span class="class1"></span>
+  <p class="class2"></p>
+  <script>
+    function deleteTextNodesRecursive(where) {
+      for (const childNode of where.childNodes) {
+        console.log(childNode);
+      };
+      // for (let i = 0; i < where.childNodes.length; i++) {
+      //   if (where.childNodes[i].nodeType === 3) {
+      //     where.removeChild(where.childNodes[i]);
+      //     i--;
+      //   } else if (where.childNodes[i].nodeType === 1) {
+      //     deleteTextNodesRecursive(where.childNodes[i]);
+      //   }
+      // console.log(where.childNodes);
+    }
+    deleteTextNodesRecursive(document.body);
+  </script>
+</body>
+</html>
